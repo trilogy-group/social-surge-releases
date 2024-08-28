@@ -27,6 +27,13 @@
       </header>
       <div id="main">
         <div class="inner">
+          <h2>Release 4.6.2</h2>
+          <h4>Date: 28 Aug, 2024</h4>
+          <ul>
+            <li>The Script stage in the Video Builder is now built in parts based on the script outline to prevent token limit overflow. This allows building much longer scripts.</li>
+            <li>'Regenerate with Feedback' and 'Next Stage' api calls in the Video Builder are now made async to prevent timeouts; while the UI polls for status.</li>
+            <li>The default output token limit for LLM calls has been increased to 8k from 4k.</li>
+          </ul>
           <h2>Release 4.6.0</h2>
           <h4>Date: 23 Aug, 2024</h4>
           <ul>
