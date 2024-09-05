@@ -27,6 +27,24 @@
       </header>
       <div id="main">
         <div class="inner">
+          <h2>Release 4.9.0</h2>
+          <h4>Date: 05 Sep, 2024</h4>
+          <ul>
+            <li>
+              Long Video Analysis
+              <ul>
+                <li>The Channel analysis page now shows a warning on selecting videos longer than 50 mins.</li>
+                <li>The user can either choose to deselct them or continue with only transcripts of the videos.</li>
+                <li>If uploaded or auto-generated captions are available on youtube, those are used for the analysis.</li>
+                <li>Else we fallback to transcripting the video ourselves using cloud services.</li>
+                <li>In future releases, we plan to ananlyze transcripts for all videos by default.</li>
+              </ul>
+            </li>
+            <li>Report generation now has access to all ingested videos' metadata along with the analyzed videos.</li>
+            <li>This allows us to show more relavant information in reports even if all videos of the channel are not analyzed.</li>
+            <li>To prevent the context from getting too long, we intelligently filter relavant videos whose metadata we want to include based on the report section prompt.</li>
+            <li>Static information has been removed from the 'Brainstorm New Viral Videos' report.</li>
+          </ul>
           <h2>Release 4.6.5</h2>
           <h4>Date: 31 Aug, 2024</h4>
           <ul>
