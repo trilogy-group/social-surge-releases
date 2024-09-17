@@ -1,276 +1,298 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Social Surge Release Notes</title>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, user-scalable=no"
-    />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <noscript>
-      <link rel="stylesheet" href="assets/css/noscript.css" />
-    </noscript>
-  </head>
-  <body class="is-preload">
-    <!-- Wrapper -->
-    <div id="wrapper">
-      <!-- Header -->
-      <header id="header">
-        <div class="inner">
-          <!-- Logo -->
-          <a href="index.html" class="logo">
-            <span class="symbol"><img src="images/logo.svg" alt="" /></span
-            ><span class="title">SocialSurge</span>
-          </a>
-        </div>
-      </header>
-      <div id="main">
-        <div class="inner">
-          <h2>Release 5.1.0</h2>
-          <h4>Date: 10 Sep, 2024</h4>
-          <ul>
-            <li>Role based access control to all new features.</li>
-            <li>Users will have access to only Channels and Video Builder by default.</li>
-            <li>Others features will be accessible only when a corresponding role has been assigned to the user.</li>
-          </ul>
-          <h2>Release 5.0.0</h2>
-          <h4>Date: 06 Sep, 2024</h4>
-          <p>Say hello to <b>Workers</b> and <b>Workflows</b> - your new tools to create, collaborate, and excel seamlessly.</p>
-          <ul>
-            <li>
-              <h3>Workers: Empower Your Tasks with Precision!</h3>
-              Designed to handle a plethora of tasks efficiently. Imagine them as expertly skilled mini-bots living in your software, eager to take on any task you throw their way.
-              <ul>
-                <li><i>Multi-Format Support:</i> Whether it's crisp text, vivid images, or dynamic React components, Workers handle them all.</li>
-                <li><i>Feedback Integration:</i> Each output isn't just delivered; it's crafted to perfection with your feedback.</li>
-              </ul>
-            </li>
-            <li>
-              <h3>Workflows: Streamline Complexity Like Never Before!</h3>
-              Building on the robust foundation laid by Workers, Workflows is set to revolutionize the way you manage and execute your projects:
-              <ul>
-                  <li><i>Chain Reaction:</i> Seamless transitioning of output from one Worker as the input for the next.</li>
-                  <li><i>Graphical Visualization:</i> Get a bird's eye view of your workflows, understanding interconnections and dependencies clearly.</li>
-                  <li><i>Context Management:</i> Provide variable contexts to ensure continuity without losing the essence of the task.</li>
-                  <li><i>Interactive Modifications:</i> Provide feedback, and resume the workflow right from the last change.</li>
-                  <li><i>Versioning System:</i> You can effortlessly navigate through different versions of your outputs. Modify, review, or roll back to previous versions at any stage. This not only secures your work against accidental changes but also empowers you to experiment and optimize without hesitation.</li>
-              </ul>
-            </li>
-          </ul>
-          <h2>Release 4.9.0</h2>
-          <h4>Date: 05 Sep, 2024</h4>
-          <ul>
-            <li>
-              Long Video Analysis
-              <ul>
-                <li>The Channel analysis page now shows a warning on selecting videos longer than 50 mins.</li>
-                <li>The user can either choose to deselct them or continue with only transcripts of the videos.</li>
-                <li>If uploaded or auto-generated captions are available on youtube, those are used for the analysis.</li>
-                <li>Else we fallback to transcripting the video ourselves using cloud services.</li>
-                <li>In future releases, we plan to ananlyze transcripts for all videos by default.</li>
-              </ul>
-            </li>
-            <li>Report generation now has access to all ingested videos' metadata along with the analyzed videos.</li>
-            <li>This allows us to show more relavant information in reports even if all videos of the channel are not analyzed.</li>
-            <li>To prevent the context from getting too long, we intelligently filter relavant videos whose metadata we want to include based on the report section prompt.</li>
-            <li>Static information has been removed from the 'Brainstorm New Viral Videos' report.</li>
-          </ul>
-          <h2>Release 4.6.5</h2>
-          <h4>Date: 31 Aug, 2024</h4>
-          <ul>
-            <li>Static information has been removed from 'Brainstorm New Viral Videos' report.</li>
-          </ul>
-          <h2>Release 4.6.4</h2>
-          <h4>Date: 30 Aug, 2024</h4>
-          <ul>
-            <li>Video Builder now produces content that matches the tone and style of the channel more accurately.</li>
-            <li>Added dropdown to produce short form content when brainstorming new idea for a channel.</li>
-          </ul>
-          <h2>Release 4.6.2</h2>
-          <h4>Date: 28 Aug, 2024</h4>
-          <ul>
-            <li>The Script stage in the Video Builder is now built in parts based on the script outline to prevent token limit overflow. This allows building much longer scripts.</li>
-            <li>'Regenerate with Feedback' and 'Next Stage' api calls in the Video Builder are now made async to prevent timeouts; while the UI polls for status.</li>
-            <li>The default output token limit for LLM calls has been increased to 8k from 4k.</li>
-          </ul>
-          <h2>Release 4.6.0</h2>
-          <h4>Date: 23 Aug, 2024</h4>
-          <ul>
-            <li>
-              "Brand Compass Samy" report template has been updated:
-              <ul>
-                <li>Percentages from the pie chart are removed.</li>
-                <li>Pie charts are now displayed for 12 months vs 30 days.</li>
-              </ul>
-            </li>
-            <li>Script stage has been added in the Video Builder.</li>
-            <li>
-              Thumbnails have been improved (16:9 size and enforcing second
-              brain rules).
-            </li>
-            <li>
-              All reports now use a less robotic tone and sound less like
-              'ChatGPT'.
-            </li>
-            <li>Home(Channels) page has been optimized to load faster.</li>
-            <li>
-              Channel details page has been optimized and issues with the loader are
-              now fixed.
-            </li>
-            <li>
-              Reports on Channel details page are now ordered and the sequence
-              does not change on new report generation.
-            </li>
-          </ul>
-          <h2>Release 4.5.0</h2>
-          <h4>Date: 20 Aug, 2024</h4>
-          <ul>
-            <li>Video Builder</li>
-            <ul>
-              <li>
-                <strong>Concept Initiation</strong>: Starts from creating the
-                concept, setting a solid foundation for your video project.
-              </li>
-              <li>
-                <strong>Create with Ease</strong>: Introducing our new Video
-                Builder, a tool designed to help you generate and visualize new
-                ideas for your video projects. It guides you through each stage
-                of the creation process.
-              </li>
-              <li>
-                <strong>Guided Workflow</strong>: With step-by-step assistance,
-                you'll find it easier than ever to bring your ideas to life.
-              </li>
-              <li>
-                <strong>Dynamic Feedback Integration</strong>: The Video Builder
-                can take feedback at any stage and update accordingly, allowing
-                for a flexible and iterative creation process.
-              </li>
-              <li>
-                <strong>Navigational Flexibility</strong>: Easily navigate back
-                and forth between all changes and stages, ensuring you can
-                refine and adjust your video content as needed.
-              </li>
-            </ul>
-            <li>Quality Control for Second Brains</li>
-            <ul>
-              <li>
-                The QC prompt can be edited from the new 'QC Prompts' page under
-                Admin section.
-              </li>
-              <li>
-                QC results are automatically generated when either a Second
-                Brain or the QC Prompt is edited.
-              </li>
-              <li>
-                Detailed QC results are displayed on clicking the 'Edit' button
-                for a Second Brain.
-              </li>
-              <li>
-                The QC prompt has been refined to detect Markdown structure
-                first and then subsequent evaluation rules.
-              </li>
-              <li>
-                'Download' button has been removed the Second Brains page to
-                keep the UI simple.
-              </li>
-            </ul>
-          </ul>
-          <h2>Release 4.2.0</h2>
-          <h4>Date: 12 Aug, 2024</h4>
-          <ul>
-            <li>
-              <a
-                href="https://socialsurge.statuspage.io"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Status Page</a
-              >
-              is now live.
-            </li>
-            <li>
-              Websocket disconnection issue after idle timeout in L2 explorer is
-              fixed.
-            </li>
-            <li>Video ingestion and analysis requests are now queued.</li>
-            <li>Time was moved to bottom on report preview page.</li>
-            <li>
-              L2 explorer and reports now support input attachments and images.
-            </li>
-            <li>Analysis failures now have proper messages in the UI.</li>
-          </ul>
-          <h2>Release 4.1.0</h2>
-          <h4>Date: 8 Aug, 2024</h4>
-          <ul>
-            <li>
-              <b>Reports Simplification</b>
-              <ul>
-                <li>
-                  Reports now support interactive widgets that can be generated
-                  using the conversational interface. You can now add "Report
-                  React Component", to a section in addition addomh text
-                  sections.
-                </li>
-                <li>
-                  The "Reports" menu item has now been removed. Reports can be
-                  accessed via the channels details page.
-                </li>
-                <li>Reports are now auto-generated on video ingestion.</li>
-              </ul>
-            </li>
-            <li>
-              <b>UI/UX Fixes</b> - This release covers a number of UI/UX fixes
-              to the add channel, channel analysis history, and channel details
-              pages
-            </li>
-            <ul>
-              <li>
-                The 'Clear Search', 'Clear Date' buttons are updated to be
-                different from 'Fetch Videos' button and to be less prominent.
-              </li>
-              <li>
-                The highlight color when selecting video thumbnail has been
-                changed from black to blue.
-              </li>
-              <li>
-                The 'Edit Prompts' button is removed from the 'Add Channel'
-                page.
-              </li>
-              <li>
-                The 'Begin Video Analysis' button is changed to 'Begin Analysing
-                X selected videos' to dynamically show number of selected
-                videos.
-              </li>
-              <li>
-                Stop Date column is removed on Channel Analysis History page.
-              </li>
-              <li>
-                Status and Results are separated into separate columns and
-                display corresponding information.
-              </li>
-              <li>
-                Error messages have been improved and will reflect for new
-                executions. Old stuck executions have been handled.
-              </li>
-              <li>
-                All videos including ones that have failed will be shown on
-                clicking 'Details' button on the Channel Analysis History page.
-              </li>
-              <li>
-                UX for View/Download buttons has been improved on the Details
-                page.
-              </li>
-            </ul>
-          </ul>
-        </div>
+   <head>
+      <title>Social Surge Release Notes</title>
+      <meta charset="utf-8" />
+      <meta
+         name="viewport"
+         content="width=device-width, initial-scale=1, user-scalable=no"
+         />
+      <link rel="stylesheet" href="assets/css/main.css" />
+      <noscript>
+         <link rel="stylesheet" href="assets/css/noscript.css" />
+      </noscript>
+   </head>
+   <body class="is-preload">
+      <!-- Wrapper -->
+      <div id="wrapper">
+         <!-- Header -->
+         <header id="header">
+            <div class="inner">
+               <!-- Logo -->
+               <a href="index.html" class="logo">
+               <span class="symbol"><img src="images/logo.svg" alt="" /></span
+                  ><span class="title">SocialSurge</span>
+               </a>
+            </div>
+         </header>
+         <div id="main">
+            <div class="inner">
+               <h2>Release 5.2.0</h2>
+               <h4>Date: 17 Sep, 2024</h4>
+               <ul>
+                  <li>
+                     Context Documents in Channels:
+                     <ul>
+                        <li>You can now add context documents, including text, files, or URLs to any channel. URLs will be automatically scraped, allowing for content retrieval and seamless integration.</li>
+                        <li>These context documents will be used to provide context and enhance the generation of workunits, ensuring more relevant and precise outputs.</li>
+                     </ul>
+                  </li>
+                  <li>
+                     Empty Channel Creation:
+                     <ul>
+                        <li>
+                           From the channels page, you can create an empty channel, serving as a flexible container.
+                        </li>
+                        <li>
+                           Empty channels can now accept context documents and can be utilized in multiple modules, such as Explorer, Reporting, Video Builder, and Workflows.
+                        </li>
+                     </ul>
+                  </li>
+               </ul>
+               <h2>Release 5.1.0</h2>
+               <h4>Date: 10 Sep, 2024</h4>
+               <ul>
+                  <li>Role based access control to all new features.</li>
+                  <li>Users will have access to only Channels and Video Builder by default.</li>
+                  <li>Others features will be accessible only when a corresponding role has been assigned to the user.</li>
+               </ul>
+               <h2>Release 5.0.0</h2>
+               <h4>Date: 06 Sep, 2024</h4>
+               <p>Say hello to <b>Workers</b> and <b>Workflows</b> - your new tools to create, collaborate, and excel seamlessly.</p>
+               <ul>
+                  <li>
+                     <h3>Workers: Empower Your Tasks with Precision!</h3>
+                     Designed to handle a plethora of tasks efficiently. Imagine them as expertly skilled mini-bots living in your software, eager to take on any task you throw their way.
+                     <ul>
+                        <li><i>Multi-Format Support:</i> Whether it's crisp text, vivid images, or dynamic React components, Workers handle them all.</li>
+                        <li><i>Feedback Integration:</i> Each output isn't just delivered; it's crafted to perfection with your feedback.</li>
+                     </ul>
+                  </li>
+                  <li>
+                     <h3>Workflows: Streamline Complexity Like Never Before!</h3>
+                     Building on the robust foundation laid by Workers, Workflows is set to revolutionize the way you manage and execute your projects:
+                     <ul>
+                        <li><i>Chain Reaction:</i> Seamless transitioning of output from one Worker as the input for the next.</li>
+                        <li><i>Graphical Visualization:</i> Get a bird's eye view of your workflows, understanding interconnections and dependencies clearly.</li>
+                        <li><i>Context Management:</i> Provide variable contexts to ensure continuity without losing the essence of the task.</li>
+                        <li><i>Interactive Modifications:</i> Provide feedback, and resume the workflow right from the last change.</li>
+                        <li><i>Versioning System:</i> You can effortlessly navigate through different versions of your outputs. Modify, review, or roll back to previous versions at any stage. This not only secures your work against accidental changes but also empowers you to experiment and optimize without hesitation.</li>
+                     </ul>
+                  </li>
+               </ul>
+               <h2>Release 4.9.0</h2>
+               <h4>Date: 05 Sep, 2024</h4>
+               <ul>
+                  <li>
+                     Long Video Analysis
+                     <ul>
+                        <li>The Channel analysis page now shows a warning on selecting videos longer than 50 mins.</li>
+                        <li>The user can either choose to deselct them or continue with only transcripts of the videos.</li>
+                        <li>If uploaded or auto-generated captions are available on youtube, those are used for the analysis.</li>
+                        <li>Else we fallback to transcripting the video ourselves using cloud services.</li>
+                        <li>In future releases, we plan to ananlyze transcripts for all videos by default.</li>
+                     </ul>
+                  </li>
+                  <li>Report generation now has access to all ingested videos' metadata along with the analyzed videos.</li>
+                  <li>This allows us to show more relavant information in reports even if all videos of the channel are not analyzed.</li>
+                  <li>To prevent the context from getting too long, we intelligently filter relavant videos whose metadata we want to include based on the report section prompt.</li>
+                  <li>Static information has been removed from the 'Brainstorm New Viral Videos' report.</li>
+               </ul>
+               <h2>Release 4.6.5</h2>
+               <h4>Date: 31 Aug, 2024</h4>
+               <ul>
+                  <li>Static information has been removed from 'Brainstorm New Viral Videos' report.</li>
+               </ul>
+               <h2>Release 4.6.4</h2>
+               <h4>Date: 30 Aug, 2024</h4>
+               <ul>
+                  <li>Video Builder now produces content that matches the tone and style of the channel more accurately.</li>
+                  <li>Added dropdown to produce short form content when brainstorming new idea for a channel.</li>
+               </ul>
+               <h2>Release 4.6.2</h2>
+               <h4>Date: 28 Aug, 2024</h4>
+               <ul>
+                  <li>The Script stage in the Video Builder is now built in parts based on the script outline to prevent token limit overflow. This allows building much longer scripts.</li>
+                  <li>'Regenerate with Feedback' and 'Next Stage' api calls in the Video Builder are now made async to prevent timeouts; while the UI polls for status.</li>
+                  <li>The default output token limit for LLM calls has been increased to 8k from 4k.</li>
+               </ul>
+               <h2>Release 4.6.0</h2>
+               <h4>Date: 23 Aug, 2024</h4>
+               <ul>
+                  <li>
+                     "Brand Compass Samy" report template has been updated:
+                     <ul>
+                        <li>Percentages from the pie chart are removed.</li>
+                        <li>Pie charts are now displayed for 12 months vs 30 days.</li>
+                     </ul>
+                  </li>
+                  <li>Script stage has been added in the Video Builder.</li>
+                  <li>
+                     Thumbnails have been improved (16:9 size and enforcing second
+                     brain rules).
+                  </li>
+                  <li>
+                     All reports now use a less robotic tone and sound less like
+                     'ChatGPT'.
+                  </li>
+                  <li>Home(Channels) page has been optimized to load faster.</li>
+                  <li>
+                     Channel details page has been optimized and issues with the loader are
+                     now fixed.
+                  </li>
+                  <li>
+                     Reports on Channel details page are now ordered and the sequence
+                     does not change on new report generation.
+                  </li>
+               </ul>
+               <h2>Release 4.5.0</h2>
+               <h4>Date: 20 Aug, 2024</h4>
+               <ul>
+                  <li>Video Builder</li>
+                  <ul>
+                     <li>
+                        <strong>Concept Initiation</strong>: Starts from creating the
+                        concept, setting a solid foundation for your video project.
+                     </li>
+                     <li>
+                        <strong>Create with Ease</strong>: Introducing our new Video
+                        Builder, a tool designed to help you generate and visualize new
+                        ideas for your video projects. It guides you through each stage
+                        of the creation process.
+                     </li>
+                     <li>
+                        <strong>Guided Workflow</strong>: With step-by-step assistance,
+                        you'll find it easier than ever to bring your ideas to life.
+                     </li>
+                     <li>
+                        <strong>Dynamic Feedback Integration</strong>: The Video Builder
+                        can take feedback at any stage and update accordingly, allowing
+                        for a flexible and iterative creation process.
+                     </li>
+                     <li>
+                        <strong>Navigational Flexibility</strong>: Easily navigate back
+                        and forth between all changes and stages, ensuring you can
+                        refine and adjust your video content as needed.
+                     </li>
+                  </ul>
+                  <li>Quality Control for Second Brains</li>
+                  <ul>
+                     <li>
+                        The QC prompt can be edited from the new 'QC Prompts' page under
+                        Admin section.
+                     </li>
+                     <li>
+                        QC results are automatically generated when either a Second
+                        Brain or the QC Prompt is edited.
+                     </li>
+                     <li>
+                        Detailed QC results are displayed on clicking the 'Edit' button
+                        for a Second Brain.
+                     </li>
+                     <li>
+                        The QC prompt has been refined to detect Markdown structure
+                        first and then subsequent evaluation rules.
+                     </li>
+                     <li>
+                        'Download' button has been removed the Second Brains page to
+                        keep the UI simple.
+                     </li>
+                  </ul>
+               </ul>
+               <h2>Release 4.2.0</h2>
+               <h4>Date: 12 Aug, 2024</h4>
+               <ul>
+                  <li>
+                     <a
+                        href="https://socialsurge.statuspage.io"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >Status Page</a
+                        >
+                     is now live.
+                  </li>
+                  <li>
+                     Websocket disconnection issue after idle timeout in L2 explorer is
+                     fixed.
+                  </li>
+                  <li>Video ingestion and analysis requests are now queued.</li>
+                  <li>Time was moved to bottom on report preview page.</li>
+                  <li>
+                     L2 explorer and reports now support input attachments and images.
+                  </li>
+                  <li>Analysis failures now have proper messages in the UI.</li>
+               </ul>
+               <h2>Release 4.1.0</h2>
+               <h4>Date: 8 Aug, 2024</h4>
+               <ul>
+                  <li>
+                     <b>Reports Simplification</b>
+                     <ul>
+                        <li>
+                           Reports now support interactive widgets that can be generated
+                           using the conversational interface. You can now add "Report
+                           React Component", to a section in addition addomh text
+                           sections.
+                        </li>
+                        <li>
+                           The "Reports" menu item has now been removed. Reports can be
+                           accessed via the channels details page.
+                        </li>
+                        <li>Reports are now auto-generated on video ingestion.</li>
+                     </ul>
+                  </li>
+                  <li>
+                     <b>UI/UX Fixes</b> - This release covers a number of UI/UX fixes
+                     to the add channel, channel analysis history, and channel details
+                     pages
+                  </li>
+                  <ul>
+                     <li>
+                        The 'Clear Search', 'Clear Date' buttons are updated to be
+                        different from 'Fetch Videos' button and to be less prominent.
+                     </li>
+                     <li>
+                        The highlight color when selecting video thumbnail has been
+                        changed from black to blue.
+                     </li>
+                     <li>
+                        The 'Edit Prompts' button is removed from the 'Add Channel'
+                        page.
+                     </li>
+                     <li>
+                        The 'Begin Video Analysis' button is changed to 'Begin Analysing
+                        X selected videos' to dynamically show number of selected
+                        videos.
+                     </li>
+                     <li>
+                        Stop Date column is removed on Channel Analysis History page.
+                     </li>
+                     <li>
+                        Status and Results are separated into separate columns and
+                        display corresponding information.
+                     </li>
+                     <li>
+                        Error messages have been improved and will reflect for new
+                        executions. Old stuck executions have been handled.
+                     </li>
+                     <li>
+                        All videos including ones that have failed will be shown on
+                        clicking 'Details' button on the Channel Analysis History page.
+                     </li>
+                     <li>
+                        UX for View/Download buttons has been improved on the Details
+                        page.
+                     </li>
+                  </ul>
+               </ul>
+            </div>
+         </div>
       </div>
-    </div>
-    <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
-  </body>
+      <!-- Scripts -->
+      <script src="assets/js/jquery.min.js"></script>
+      <script src="assets/js/browser.min.js"></script>
+      <script src="assets/js/breakpoints.min.js"></script>
+      <script src="assets/js/util.js"></script>
+      <script src="assets/js/main.js"></script>
+   </body>
 </html>
