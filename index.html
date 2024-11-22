@@ -27,6 +27,62 @@
          </header>
          <div id="main">
             <div class="inner">
+               <h2>Release 5.9.0</h2>
+               <h4>Date: 22 Nov, 2024</h4>
+               <ul>
+                  <li>
+                     <b>Workflow Updates:</b>
+                     <ul>
+                        <li>Create Worker within Workflow:</li>
+                        <ul>
+                           <li>Users can now create workers directly within workflows, eliminating the need to switch back and forth between the worker page and workflows.</li>
+                           <li>This streamlines the process and simplifies workflow creation.</li>
+                        </ul>
+                        <li>Handling Larger Workflows:</li>
+                        <ul>
+                           <li>We've enhanced the workflow system to better support larger workflows, solving the previous issue of timeouts after 15 minutes of execution.</li>
+                           <li>This ensures smooth execution of complex workflows without interruptions.</li>
+                        </ul>
+                        <li>Input Node Modals:</li>
+                        <ul>
+                           <li>Added modals for input nodes, allowing users to view text inputs from previous workflow runs.</li>
+                           <li>This feature helps users review and reuse previous inputs more easily, improving flexibility.</li>
+                        </ul>
+                        <li>Empty Input Validation:</li>
+                        <ul>
+                           <li>Workflows will now alert users with an error message if any input nodes are empty.</li>
+                           <li>This prevents workflow failures due to missing data, ensuring smoother and more reliable execution.</li>
+                        </ul>
+                     </ul>
+                  </li>
+                  <li>
+                     <b>Tool Call UI Update:</b>
+                     <ul>
+                        <li>Added Show More / Show Less functionality to the Tool Call UI for improved navigation.</li>
+                        <li>This enhancement reduces the need for excessive scrolling, allowing users to focus on the sections that matter most for better visibility.</li>
+                     </ul>
+                  </li>
+                  <li>
+                     <b>Ingest Channel Tool Update:</b>
+                     <ul>
+                        <li>Users can now specify minimum and maximum duration for video/audio ingestion.</li>
+                        <li>This added control allows for more precise management of content duration, optimizing the ingestion process.</li>
+                     </ul>
+                  </li>
+                  <li>
+                     <b>Minor Updates:</b>
+                     <ul>
+                        <li>Video Analysis JSON View:</li>
+                        <ul>
+                           <li>The video analysis JSON view now includes the source parameter, providing additional context for improved analysis.</li>
+                        </ul>
+                        <li>Brand Compass Report Fix:</li>
+                        <ul>
+                           <li>Resolved the issue that was causing failures in Brand Compass report generation, ensuring consistent and reliable report outputs.</li>
+                        </ul>
+                     </ul>
+                  </li>
+               </ul>
                <h2>Release 5.8.0</h2>
                <h4>Date: 16 Nov, 2024</h4>
                <ul>
