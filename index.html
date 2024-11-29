@@ -27,6 +27,76 @@
          </header>
          <div id="main">
             <div class="inner">
+               <h2>Release 5.10.0</h2>
+               <h4>Date: 29 Nov, 2024</h4>
+               <ul>
+                  <li>
+                     <b>Workflow Enhancements:</b>
+                     <ul>
+                        <li>Current Worker Visibility:</li>
+                        <ul>
+                           <li>Users can now view the currently running worker in workflows, improving transparency and tracking of workflow progress.</li>
+                        </ul>
+                        <li>Edit File Inputs:</li>
+                        <ul>
+                           <li>Introduced a "Change File" button in input nodes of type file, allowing users to update file inputs directly without deleting and recreating the node.</li>
+                           <li>Simplifies workflow editing, saving time and effort.</li>
+                        </ul>
+                        <li>Deleted Worker Highlighting:</li>
+                        <ul>
+                           <li>Deleted workers are now highlighted in red within workflows, making it easier to identify missing workers and maintain workflow integrity.</li>
+                        </ul>
+                     </ul>
+                  </li>
+                  <li>
+                     <b>Worker Management:</b>
+                     <ul>
+                        <li>Delete Confirmation Modal:</li>
+                        <ul>
+                           <li>Added a modal when deleting a worker, highlighting associated workflows that use it.</li>
+                           <li>Reduces accidental deletions by ensuring users are aware of potential impacts.</li>
+                        </ul>
+                     </ul>
+                  </li>
+                  <li>
+                     <b>L2 Explorer Updates:</b>
+                     <ul>
+                        <li>Second Brains Dropdown:</li>
+                        <ul>
+                           <li>Added a dropdown menu for selecting specific second brains to include only the most relevant context.</li>
+                        </ul>
+                     </ul>
+                  </li>
+                  <li>
+                     <b>Second Brains Enhancements:</b>
+                     <ul>
+                        <li>Improved Context Quality:</li>
+                        <ul>
+                           <li>Second brains are now added as complete documents instead of chunks.</li>
+                           <li>Improves the LLM's ability to follow and utilize the context, resulting in more coherent and accurate outputs.</li>
+                        </ul>
+                     </ul>
+                  </li>
+                  <li>
+                     <b>Ingest Channel Tool Updates:</b>
+                     <ul>
+                        <li>Support for Video Types:</li>
+                        <ul>
+                           <li>Added the ability to filter video ingestion by type: YouTube Shorts, full-length videos, or both.</li>
+                           <li>Enables focused virality analysis based on specific video formats, ensuring insights align with user goals.</li>
+                        </ul>
+                     </ul>
+                  </li>
+                  <li>
+                     <b>Bug Fixes:</b>
+                     <ul>
+                        <li>Second Brains Ingestion Bug:</li>
+                        <ul>
+                           <li>Resolved an issue where second brains ingestion and QC analysis was not working.</li>
+                        </ul>
+                     </ul>
+                  </li>
+               </ul>
                <h2>Release 5.9.0</h2>
                <h4>Date: 22 Nov, 2024</h4>
                <ul>
