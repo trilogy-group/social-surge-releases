@@ -27,6 +27,75 @@
          </header>
          <div id="main">
             <div class="inner">
+               <h2>Release 5.11.0</h2>
+               <h4>Date: 7 Dec, 2024</h4>
+               <ul>
+                  <li>
+                     <b>Ingest Video Tool:</b>
+                     <ul>
+                        <li>Simplified Ingestion:</li>
+                        <ul>
+                           <li>Replaced the Ingest Channel Tool with the Ingest Video Tool.</li>
+                           <li>Users can now ingest videos by providing a video URL and the channel handle or name. This makes it more generic and easy to use for various tasks.</li>
+                        </ul>
+                     </ul>
+                  </li>
+                  <li>
+                     <b>Video Model Enhancements:</b>
+                     <ul>
+                        <li>Added `isShort` and `isAnalyzed` parameters to the video model.</li>
+                        <ul>
+                           <li>Resolves "no context found" issues for unanalyzed videos.</li>
+                           <li>Enables explicit analysis for short or long videos as required.</li>
+                        </ul>
+                     </ul>
+                  </li>
+                  <li>
+                     <b>Workflow Optimizations:</b>
+                     <ul>
+                        <li>Enhanced Large Input Handling:</li>
+                        <ul>
+                           <li>Workflows now support larger inputs with optimized performance.</li>
+                           <li>Improved context passing for faster, more reliable execution.</li>
+                        </ul>
+                        <li>Workflow Resume after Feedback:</li>
+                        <ul>
+                           <li>Resuming workflows after feedback only runs dependent nodes, skipping others.</li>
+                           <li>Improves efficiency and reduces runtime.</li>
+                        </ul>
+                     </ul>
+                  </li>
+                  <li>
+                     <b>UI Improvements:</b>
+                     <ul>
+                        <li>Added a loading spinner animation on worker nodes during feedback submission.</li>
+                        <li>Introduced output type icons for workers within workflow templates, improving UI clarity and providing better context for users.</li>
+                     </ul>
+                  </li>
+                  <li>
+                     <b>Bug Fixes:</b>
+                     <ul>
+                        <li>Claude Output Issue:</li>
+                        <ul>
+                           <li>Resolved issue where Claude outputs were cut off midway.</li>
+                           <li>Added debug logs and updated prompts to handle stop conditions.</li>
+                        </ul>
+                        <li>L2 Explorer Freezing:</li>
+                        <ul>
+                           <li>Fixed freezing issue caused by compatibility problems in the L2 Explorer.</li>
+                        </ul>
+                     </ul>
+                  </li>
+                  <li>
+                     <b>Quality of Life Improvements:</b>
+                     <ul>
+                        <li>Added a "Copy as Markdown" option for Text Worker outputs.</li>
+                        <li>Optimized query_metadata tool functionality for faster execution.</li>
+                        <li>Integrated Brand Compass Report into L2 Explorer and Workers, improving the quality of the outputs.</li>
+                        <li>Updated the React worker to output complete codes with all the required details and follow user instructions.</li>
+                     </ul>
+                  </li>
+               </ul>
                <h2>Release 5.10.0</h2>
                <h4>Date: 29 Nov, 2024</h4>
                <ul>
